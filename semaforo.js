@@ -1,33 +1,33 @@
 class Semaforo {
-  cor = "vermelho";
-  ligado = false;
-  tempoRestante = 0;
+    cor = "vermelho";
+    ligado = false;
+    tempoRestante = 0;
 
-  ligar() {
-    this.ligado = true;
-    this.cor = "vermelho";
-  }
+    ligar() {
+        this.ligado = true;
+        this.cor = "vermelho";
+    }
 
-  desligar() {
-    this.ligado = false;
-    this.cor = "apagado";
-    this.tempoRestante = 0;
-  }
+    desligar() {
+        this.ligado = false;
+        this.cor = "apagado";
+        this.tempoRestante = 0;
+    }
 
-  trocarCor(novaCor) {
-    if (!this.ligado) return;
+    trocarCor(novaCor) {
+        if (!this.ligado) return;
 
-    const permitidas = ["vermelho", "amarelo", "verde"];
-    if (!permitidas.includes(novaCor)) return;
-    this.cor = novaCor;
-  }
+        const permitidas = ["vermelho", "amarelo", "verde"];
+        if (!permitidas.includes(novaCor)) return;
+        this.cor = novaCor;
+    }
 
-  iniciarContagem(segundos) {
-    if (!this.ligado) return;
-    if (segundos <= 0) return;
+    iniciarContagem(segundos) {
+        if (!this.ligado) return;
+        if (segundos <= 0) return;
 
-    this.tempoRestante = segundos;
-  }
+        this.tempoRestante = segundos;
+    }
 }
 
 const s1 = new Semaforo();

@@ -1,22 +1,22 @@
 // ====== MODELOS ======
 class Cliente {
-  constructor(nome) {
-    this.nome = nome;
-  }
+    constructor(nome) {
+        this.nome = nome;
+    }
 }
 
 class ContaCorrente {
-  _cliente;
+    _cliente;
 
-  set cliente(novoValor) {
-    if (novoValor instanceof Cliente) {
-      this._cliente = novoValor;
+    set cliente(novoValor) {
+        if (novoValor instanceof Cliente) {
+            this._cliente = novoValor;
+        }
     }
-  }
 
-  get cliente() {
-    return this._cliente;
-  }
+    get cliente() {
+        return this._cliente;
+    }
 }
 
 // ====== TESTE VISUAL (4 prints) ======
